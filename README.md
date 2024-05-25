@@ -7,4 +7,7 @@ First, install [Node.js](https://nodejs.org/en/download/package-manager). Versio
 
 Then, copy the `hosts.sample` file and rename it to `hosts`, and add the domains you want to get certificates for, one per line.
 
-To start the script simply run `npm start` in a console.
+To start the script, use the following command:
+```bash
+npm start
+```
