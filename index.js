@@ -2,8 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const tls = require('tls');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
-
 const getExpirationDate = (host, port) => new Promise((resolve) => {
   const client = tls.connect(port, host, undefined, () => {
     const certificate = client.getPeerCertificate();
@@ -34,3 +32,8 @@ const main = async () => {
 };
 
 main();
+
+module.exports = {
+  getExpirationDate,
+  getHosts,
+}
